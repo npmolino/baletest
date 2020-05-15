@@ -16,3 +16,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file oshmem/Dockerfile_bale_test --tag my-image-name:$(date +%s)
+    - name: Run te Docker images
+      run: docker run oshmem/Dockerfile_bale_test cat /opt/baletemp/hi.txt

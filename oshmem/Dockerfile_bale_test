@@ -1,0 +1,12 @@
+FROM npmolino/bale_public_oshmem4.0.3:v1 
+
+RUN oshmem4.0.3:latestapt-get -y update \
+    && apt-get install -y --no-install-recommends \
+	pandoc vim less curl
+
+COPY . /opt/baletemp
+
+WORKDIR /opt/baletemp
+
+RUN echo  "hello world" >> /opt/baletemp/hi.txt
+

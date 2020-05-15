@@ -17,4 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file oshmem/Dockerfile_bale_test --tag bale_test:v1
     - name: Run the Docker image
-      run: docker run bale_test:v1 cat /opt/baletemp/hi.txt
+      run: docker run --rm bale_test:v1 cat /opt/baletemp/hi.txt
+    - name: Run something else in Docker 
+      run: docker run --rm bale_test:v1 ls /opt/baletemp
+      

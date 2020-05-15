@@ -10,7 +10,7 @@ jobs:
 
   build:
 
-    runs-on: npmolino/bale_public_oshmem4.0.3:v1
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2

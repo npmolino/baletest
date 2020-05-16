@@ -16,5 +16,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file oshmem/Dockerfile_bale_test --tag bale_test:v1
-    - name: Run the Docker image
+    - name: Run the Docker image to see the contents of hi.txt
       run: docker run bale_test:v1 cat /opt/baletemp/hi.txt
